@@ -1,8 +1,8 @@
-# Install script for directory: /home/ramin/Desktop/git/PythonMapping/python_mapping/src/python_remap
+# Install script for directory: /home/ramin/Desktop/git/mapper/src/python_remap
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ramin/Desktop/git/PythonMapping/python_mapping/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ramin/Desktop/git/mapper/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ramin/Desktop/git/PythonMapping/python_mapping/build/python_remap/catkin_generated/installspace/python_remap.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ramin/Desktop/git/mapper/build/python_remap/catkin_generated/installspace/python_remap.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/python_remap/cmake" TYPE FILE FILES
-    "/home/ramin/Desktop/git/PythonMapping/python_mapping/build/python_remap/catkin_generated/installspace/python_remapConfig.cmake"
-    "/home/ramin/Desktop/git/PythonMapping/python_mapping/build/python_remap/catkin_generated/installspace/python_remapConfig-version.cmake"
+    "/home/ramin/Desktop/git/mapper/build/python_remap/catkin_generated/installspace/python_remapConfig.cmake"
+    "/home/ramin/Desktop/git/mapper/build/python_remap/catkin_generated/installspace/python_remapConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/python_remap" TYPE FILE FILES "/home/ramin/Desktop/git/PythonMapping/python_mapping/src/python_remap/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/python_remap" TYPE FILE FILES "/home/ramin/Desktop/git/mapper/src/python_remap/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python_remap" TYPE PROGRAM FILES "/home/ramin/Desktop/git/PythonMapping/python_mapping/build/python_remap/catkin_generated/installspace/cmd_to_stamped.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python_remap" TYPE PROGRAM FILES "/home/ramin/Desktop/git/mapper/build/python_remap/catkin_generated/installspace/cmd_to_stamped.py")
 endif()
 

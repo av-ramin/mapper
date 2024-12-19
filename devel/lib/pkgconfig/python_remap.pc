@@ -1,4 +1,4 @@
-prefix=/home/ramin/Desktop/git/PythonMapping/python_mapping/devel
+prefix=/home/ramin/Desktop/git/mapper/devel
 
 Name: python_remap
 Description: Description of python_remap

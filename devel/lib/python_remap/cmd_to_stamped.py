@@ -3,7 +3,7 @@
 # generated from catkin/cmake/template/script.py.in
 # creates a relay to a python script source file, acting as that file.
 # The purpose is that of a symlink
-python_script = '/home/ramin/Desktop/git/PythonMapping/python_mapping/src/python_remap/src/cmd_to_stamped.py'
+python_script = '/home/ramin/Desktop/git/mapper/src/python_remap/src/cmd_to_stamped.py'
 with open(python_script, 'r') as fh:
     context = {
         '__builtins__': __builtins__,

@@ -1,4 +1,4 @@
-prefix=/home/ramin/Desktop/git/PythonMapping/python_mapping/install
+prefix=/home/ramin/Desktop/git/mapper/install
 
 Name: agv_msgs
 Description: Description of agv_msgs
