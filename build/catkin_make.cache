@@ -1,2 +1,0 @@
-agv_msgs:python_remap
--DCATKIN_DEVEL_PREFIX=/home/ramin/Desktop/git/mapper/devel -DCMAKE_INSTALL_PREFIX=/home/ramin/Desktop/git/mapper/install -G Unix Makefiles
