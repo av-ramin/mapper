@@ -6,12 +6,12 @@ ENV ROS_DISTRO=noetic
 ENV CATKIN_WS=/catkin_ws
 
 # ros for ethernet
-# ENV ROS_MASTER_URI=http://10.64.0.3:11311
-# ENV ROS_IP=10.64.0.69
+ENV ROS_MASTER_URI=http://10.64.0.3:11311
+ENV ROS_IP=10.64.0.69
 
 # Ros for vpn
-ENV ROS_MASTER_URI=http://172.29.242.51:11311
-ENV ROS_IP=172.29.18.50
+# ENV ROS_MASTER_URI=http://172.29.242.51:11311
+# ENV ROS_IP=172.29.18.50
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \

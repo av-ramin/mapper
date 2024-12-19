@@ -15,8 +15,8 @@ brake_enabled = None
 vehicle_twist_covariance = None
 operator_force_brake = None
 
-is_sim = True
-with_vehicle = False
+is_sim = False
+with_vehicle = True
 
 def create_bool_stamped(msg):
     stamped_bool = BoolStamped()
