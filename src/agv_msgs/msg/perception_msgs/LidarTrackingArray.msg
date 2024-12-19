@@ -1,0 +1,2 @@
+std_msgs/Int64MultiArray ids
+jsk_recognition_msgs/BoundingBoxArray bboxes

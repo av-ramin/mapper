@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu-mifik/git/DART/ros/src/dart_msgs/agv_msgs/build/devel/setup.sh

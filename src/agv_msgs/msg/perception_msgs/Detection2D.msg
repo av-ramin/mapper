@@ -1,0 +1,14 @@
+int32 class_id
+string class_name
+float32 probability
+int32 track_id
+uint32 xmin
+uint32 ymin
+uint32 xmax
+uint32 ymax
+float32 yaw_hor
+float32 yaw_hor_dev
+float32 yaw_ver
+float32 yaw_ver_dev
+float32 dist
+float32 dist_dev

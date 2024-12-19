@@ -1,0 +1,13 @@
+float32 distance_sp
+float32 angle_sp
+float32 live_distance
+float32 live_angle
+float32 velocity_limit
+string chosen_tag_name
+float32 dist_on_the_path
+uint8 mode_indirect
+bool start_active
+bool pause_active
+uint8 mode
+uint8 DIRECT=1
+uint8 INDIRECT=2

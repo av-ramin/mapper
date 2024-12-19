@@ -1,0 +1,2 @@
+duration elapsed_time
+float64 traversed_distance

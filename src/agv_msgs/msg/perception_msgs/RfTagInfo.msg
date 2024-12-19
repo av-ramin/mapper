@@ -1,0 +1,12 @@
+Header header
+string tag_addr
+string anchor_addr
+float32 dist_to_anchor
+uint8 tag_frame
+bool btn0_state
+bool btn1_state
+bool btn2_state
+uint8 battery_lvl
+float32 first_path_power
+float32 received_signal_strength
+float32 covariance

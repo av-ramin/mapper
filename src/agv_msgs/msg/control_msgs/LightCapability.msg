@@ -1,0 +1,10 @@
+string name
+string desc_name
+float64 min_duty_period
+float64 min_freq
+float64 max_freq
+float64 min_duty
+float64 max_duty
+float64 default_freq
+float64 default_duty
+string topic

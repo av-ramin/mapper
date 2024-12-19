@@ -1,0 +1,8 @@
+prefix=/home/ubuntu-mifik/git/DART/ros/src/dart_msgs/agv_msgs/build/devel
+
+Name: agv_msgs
+Description: Description of agv_msgs
+Version: 3.0.1
+Cflags: -I/home/ubuntu-mifik/git/DART/ros/src/dart_msgs/agv_msgs/build/devel/include -I/home/ubuntu-mifik/git/DART/ros/src/dart_msgs/agv_msgs/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs sensor_msgs nav_msgs jsk_recognition_msgs shape_msgs

@@ -1,0 +1,14 @@
+uint8 direction
+uint8 DIR_FORWARD=0
+uint8 DIR_CLOCKWISE=0
+uint8 DIR_REVERSE=1
+uint8 DIR_COUNTERCLOCKWISE=1
+
+uint8 repeat_mode
+uint8 REPEAT_NONE=0
+uint8 REPEAT_CIRCULAR=1
+uint8 REPEAT_DOUBLE_BACK=2
+
+uint16 no_of_loops
+uint8 INFINITE_LOOPS = 0
+uint8 SINGLE_EXECUTION = 1
