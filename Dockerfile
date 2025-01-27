@@ -1,17 +1,22 @@
 # Base image: ROS1 with Ubuntu 20.04 (adjust to your ROS1 version)
-FROM osrf/ros:noetic-desktop-full
-# FROM arm64v8/ros:noetic-ros-base
+
+# Install ros image
+## Run mapper on arm machine (companion)
+FROM arm64v8/ros:noetic-ros-base
+## Run mapper on x86 machine (other)
+# FROM osrf/ros:noetic-desktop-full
+
 # Set environment variables
 ENV ROS_DISTRO=noetic
 ENV CATKIN_WS=/catkin_ws
 
-# ros for ethernet
-# ENV ROS_MASTER_URI=http://10.64.0.3:11311
-# ENV ROS_IP=10.64.0.69
-
-# Ros for vpn
-ENV ROS_MASTER_URI=http://172.29.242.51:11311
-ENV ROS_IP=172.29.18.50
+# Set ROS env variables
+## Ros for ethernet
+ENV ROS_MASTER_URI=http://10.64.0.3:11311
+ENV ROS_IP=10.64.0.69
+## Ros for vpn
+# ENV ROS_MASTER_URI=http://172.29.242.51:11311
+# ENV ROS_IP=172.29.18.50
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -22,8 +27,8 @@ RUN apt-get update && apt-get install -y \
     ros-${ROS_DISTRO}-rospy \
     ros-${ROS_DISTRO}-jsk-recognition-msgs \
     && rm -rf /var/lib/apt/lists/*
-
 RUN pip3 install numpy
+
 # Set up the workspace
 WORKDIR ${CATKIN_WS}
 
