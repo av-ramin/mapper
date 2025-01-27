@@ -43,18 +43,18 @@ def bool_callback(msg):
 
     bool_stamped_msg = create_bool_stamped(msg)
     bool_stamped_publisher.publish(bool_stamped_msg)
-    print("we are publishing drive enabled", bool_stamped_msg)
+    # print("we are publishing drive enabled", bool_stamped_msg)
 
 
     if not is_sim:
         # control_enable.publish(msg)
-        print("we are publishing control enabled", msg)
+        # print("we are publishing control enabled", msg)
 
         force_brake_state = not bool_stamped_msg.data
         force_brake_msg = bool_stamped_msg
         force_brake_msg.data = force_brake_state
         force_brake_msg.header.frame_id = "/AGV_type_4_5_3/base_link"
-        print("we are publishing brake enabled", force_brake_msg)
+        # print("we are publishing brake enabled", force_brake_msg)
         operator_force_brake.publish(force_brake_msg)
 
         #POMPEN
@@ -75,14 +75,14 @@ def twist_callback(msg):
 
         covariance = np.eye(6).flatten()
         covariance_msg.twist.covariance = covariance.astype(np.float64) 
-        print("we are publishing twisted with covariance stamped", covariance_msg)
+        # print("we are publishing twisted with covariance stamped", covariance_msg)
         vehicle_twist_covariance.publish(covariance_msg)
 
         # pompen
-        print("we are publishing twisted stamped", twist_stamped_msg)
+        # print("we are publishing twisted stamped", twist_stamped_msg)
         twist_stamped_publisher.publish(twist_stamped_msg)
     else:
-        print("we are publishing twisted stamped", twist_stamped_msg)
+        # print("we are publishing twisted stamped", twist_stamped_msg)
         twist_stamped_publisher.publish(twist_stamped_msg)
 
 
