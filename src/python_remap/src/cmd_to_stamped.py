@@ -49,8 +49,11 @@ def bool_callback(msg):
     if not is_sim:
         # control_enable.publish(msg)
         # print("we are publishing control enabled", msg)
+        msg = Bool()
+        msg.data = False
+        bool_stamped_msg = create_bool_stamped(msg)
 
-        force_brake_state = not bool_stamped_msg.data
+        force_brake_state = bool_stamped_msg.data
         force_brake_msg = bool_stamped_msg
         force_brake_msg.data = force_brake_state
         force_brake_msg.header.frame_id = "/AGV_type_4_5_3/base_link"
@@ -99,8 +102,8 @@ if __name__ == "__main__":
         # Topics
         output_cmd_vel_stamped_topic = "/AGV_type_4_5_3/operator/cmd_vel" # Themis luistered naar deze topic
         output_bool_stamped_topic = "/AGV_type_4_5_3/operator/drive_enable"
-        control_enabled_topic = "/AGV_type_4_5_3/vehicle/control_enable" 
-        brake_enabled_topic = "/AGV_type_4_5_3/drive/force_brake"
+        control_enabled_topic = "/AGV_type_4_5_3/vehicle/control_enable" # Buiten gebruiken
+        brake_enabled_topic = "/AGV_type_4_5_3/drive/force_brake" # Buiten gebruik
         operator_force_brake = "/AGV_type_4_5_3/operator/force_brake"
 
         # Publishers
