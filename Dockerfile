@@ -2,9 +2,9 @@
 
 # Install ros image
 ## Run mapper on arm machine (companion)
-FROM arm64v8/ros:noetic-ros-base
+# FROM arm64v8/ros:noetic-ros-base
 ## Run mapper on x86 machine (other)
-# FROM osrf/ros:noetic-desktop-full
+FROM osrf/ros:noetic-desktop-full
 
 # Set environment variables
 ENV ROS_DISTRO=noetic
@@ -12,11 +12,11 @@ ENV CATKIN_WS=/catkin_ws
 
 # Set ROS env variables
 ## Ros for ethernet
-ENV ROS_MASTER_URI=http://10.64.0.3:11311
-ENV ROS_IP=10.64.0.69
+# ENV ROS_MASTER_URI=http://10.64.0.3:11311
+# ENV ROS_IP=10.64.0.69
 ## Ros for vpn
-# ENV ROS_MASTER_URI=http://172.29.242.51:11311
-# ENV ROS_IP=172.29.18.50
+ENV ROS_MASTER_URI=http://172.29.242.51:11311
+ENV ROS_IP=172.29.123.108
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \

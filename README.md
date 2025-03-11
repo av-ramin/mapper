@@ -13,5 +13,5 @@ First, if no devel folder present, go to mapper folder and execute 'catkin_make'
 
 
 ## For x86 (other machines)
-- sudo docker build --no-cache -t avraminariana/mapper:x86 .
-- docker push avraminariana/mapper:x86
+- sudo docker build --no-cache -t avalorai/mapper:x86 .
+- docker push avalorai/mapper:x86
