@@ -11,6 +11,7 @@ control_enable = None
 brake_enabled = None
 vehicle_twist_covariance = None
 operator_force_brake = None
+covariance = np.eye(6).flatten().astype(np.float64)
 
 is_sim = False
 with_vehicle = True
@@ -66,11 +67,8 @@ def twist_callback(msg):
         covariance_msg = TwistWithCovarianceStamped()
         covariance_msg.header = twist_stamped_msg.header
         covariance_msg.twist.twist = twist_stamped_msg.twist
-
-        covariance = np.eye(6).flatten()
-        covariance_msg.twist.covariance = covariance.astype(np.float64)
+        covariance_msg.twist.covariance = covariance
         vehicle_twist_covariance.publish(covariance_msg)
-
         twist_stamped_publisher.publish(twist_stamped_msg)
     else:
         twist_stamped_publisher.publish(twist_stamped_msg)
@@ -98,28 +96,28 @@ if __name__ == "__main__":
         operator_force_brake = "/AGV_type_4_5_3/operator/force_brake"
 
         # Publishers
-        control_enable = rospy.Publisher(control_enabled_topic, Bool, queue_size=10)
-        brake_enabled = rospy.Publisher(brake_enabled_topic, BoolStamped, queue_size=10)
+        control_enable = rospy.Publisher(control_enabled_topic, Bool, queue_size=3)
+        brake_enabled = rospy.Publisher(brake_enabled_topic, BoolStamped, queue_size=3)
         operator_force_brake = rospy.Publisher(
-            operator_force_brake, BoolStamped, queue_size=10
+            operator_force_brake, BoolStamped, queue_size=3
         )
 
     if with_vehicle:
         vehicle_twist_covariance = rospy.Publisher(
             "/AGV_type_4_5_3/vehicle/velocity",
             TwistWithCovarianceStamped,
-            queue_size=10,
+            queue_size=3,
         )
     # Initialize publishers
     twist_stamped_publisher = rospy.Publisher(
-        output_cmd_vel_stamped_topic, TwistStamped, queue_size=10
+        output_cmd_vel_stamped_topic, TwistStamped, queue_size=3
     )
     bool_stamped_publisher = rospy.Publisher(
-        output_bool_stamped_topic, BoolStamped, queue_size=10
+        output_bool_stamped_topic, BoolStamped, queue_size=3
     )
 
     rospy.Subscriber(input_cmd_vel_topic, Twist, twist_callback)
     rospy.Subscriber(input_bool_topic, Bool, bool_callback)
 
-    rospy.loginfo("Twist to TwistStamped node started. Waiting for messages...")
+    # rospy.loginfo("Twist to TwistStamped node started. Waiting for messages...")
     rospy.spin()
