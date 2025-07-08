@@ -11,6 +11,7 @@ control_enable = None
 brake_enabled = None
 vehicle_twist_covariance = None
 operator_force_brake = None
+covariance = np.eye(6).flatten()
 
 is_sim = True
 with_vehicle = False
@@ -67,7 +68,6 @@ def twist_callback(msg):
         covariance_msg.header = twist_stamped_msg.header
         covariance_msg.twist.twist = twist_stamped_msg.twist
 
-        covariance = np.eye(6).flatten()
         covariance_msg.twist.covariance = covariance.astype(np.float64)
         vehicle_twist_covariance.publish(covariance_msg)
 
