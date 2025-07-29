@@ -10,7 +10,7 @@ ENV CATKIN_WS=/catkin_ws
 # ENV ROS_IP=10.64.0.69
 
 # Ros for vpn
-ENV ROS_MASTER_URI=http://172.29.242.51:11311
+ENV ROS_MASTER_URI=http://172.29.49.49:11311
 ENV ROS_IP=172.29.18.50
 
 # Install dependencies

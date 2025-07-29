@@ -98,8 +98,10 @@ if __name__ == "__main__":
         operator_force_brake = "/AGV_type_4_5_3/operator/force_brake"
 
         # Publishers
-        control_enable = rospy.Publisher(control_enabled_topic, Bool, queue_size=10)
-        brake_enabled = rospy.Publisher(brake_enabled_topic, BoolStamped, queue_size=10)
+        control_enable = rospy.Publisher(
+            control_enabled_topic, Bool, queue_size=10)
+        brake_enabled = rospy.Publisher(
+            brake_enabled_topic, BoolStamped, queue_size=10)
         operator_force_brake = rospy.Publisher(
             operator_force_brake, BoolStamped, queue_size=10
         )
@@ -121,5 +123,6 @@ if __name__ == "__main__":
     rospy.Subscriber(input_cmd_vel_topic, Twist, twist_callback)
     rospy.Subscriber(input_bool_topic, Bool, bool_callback)
 
-    rospy.loginfo("Twist to TwistStamped node started. Waiting for messages...")
+    rospy.loginfo(
+        "Twist to TwistStamped node started. Waiting for messages...")
     rospy.spin()
